@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>446F9636-F076-454B-BC79-6A4F5CCEE02F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MLKMenuPopover_Extend</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3AD0845C73D511B2775C74A56BF4065728BB6A06</key>
+		<string>https://github.com/linyc/MLKMenuPopover_Extend.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MLKMenuPopover_Extend.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3AD0845C73D511B2775C74A56BF4065728BB6A06</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/linyc/MLKMenuPopover_Extend.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3AD0845C73D511B2775C74A56BF4065728BB6A06</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3AD0845C73D511B2775C74A56BF4065728BB6A06</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MLKMenuPopover_Extend</string>
+		</dict>
+	</array>
+</dict>
+</plist>

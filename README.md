@@ -11,3 +11,6 @@
 
 
 ![](https://github.com/linyc/MLKMenuPopover_Extend/raw/master/show.gif)
+
+#License
+[MIT License](http://opensource.org/licenses/MIT).

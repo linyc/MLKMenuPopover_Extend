@@ -6,3 +6,8 @@
 很多代码都是原来的，我只是改成了类似微信的样子并增加了实现自己需求的代码，然后也再封装了一下，可以直接调用。
 
 原github地址：https://github.com/NagaMallesh/MLKMenuPopover
+
+
+show
+
+![](https://github.com/linyc/MLKMenuPopover_Extend/raw/master/show.gif)

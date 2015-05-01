@@ -13,7 +13,7 @@
 #define CELL_IDENTIGIER         @"MenuPopoverCell"
 #define MENU_TABLE_VIEW_FRAME   CGRectMake(0, 0, frame.size.width, frame.size.height)
 #define SEPERATOR_LINE_RECT     CGRectMake(10, MENU_ITEM_HEIGHT - 1, self.frame.size.width - 20, 1)
-#define MENU_POINTER_RECT       CGRectMake([UIScreen mainScreen].bounds.size.width - 38, frame.origin.y, 23, 11)
+#define MENU_POINTER_RECT       CGRectMake([UIScreen mainScreen].bounds.size.width - 38, frame.origin.y+64, 23, 11)
 
 #define CONTAINER_BG_COLOR      RGBA(0, 0, 0, 0.1f)
 
@@ -30,18 +30,21 @@
 
 @property(nonatomic,retain) NSArray *menuItems;
 
+@property (nonatomic,strong) NSArray *menuIcons;
+
 @property(nonatomic,strong) UIButton *btnFrame;
 
 @end
 
 @implementation PopMenuView
 
-- (instancetype)initWithFrame:(CGRect)frame menuItems:(NSArray *)aMenuItems
+- (instancetype)initWithFrame:(CGRect)frame menuItems:(NSArray *)aMenuItems menuIcons:(NSArray*)menuIcons
 {
     self = [super initWithFrame:frame];
     if (self) {
         
         self.menuItems = aMenuItems;
+        self.menuIcons = menuIcons;
         
         self.backgroundColor = [UIColor clearColor];
         
@@ -56,7 +59,7 @@
         [self.btnFrame addSubview:menuPointerView];
         
         // Adding menu Items table
-        UITableView *menuItemsTableView = [[UITableView alloc] initWithFrame:CGRectMake(frame.size.width - 140, 11, 130, aMenuItems.count * 44 - 1)];
+        UITableView *menuItemsTableView = [[UITableView alloc] initWithFrame:CGRectMake(frame.size.width - 140, 75, 130, aMenuItems.count * 44 - 1)];
         
         menuItemsTableView.dataSource = self;
         menuItemsTableView.delegate = self;
@@ -108,12 +111,14 @@
     }
     
     
+    cell.imageView.image = [UIImage imageNamed:self.menuIcons[indexPath.row]];
     cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
     
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /* todo: 这段代码是给选中的item打勾，看具体情况是否需要，需要取消注释即可
     //linyc add begin.
     for (int i = 0; i<self.menuItems.count; i++) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
@@ -128,6 +133,7 @@
         cell.textLabel.text = text;
     }
     //linyc add end.
+     */
     
     [self.delegate didPopViewSelected:indexPath.row];
     

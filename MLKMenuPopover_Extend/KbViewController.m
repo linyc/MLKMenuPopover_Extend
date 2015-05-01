@@ -13,6 +13,7 @@
 
 @property(nonatomic,strong) PopMenuView *popView;
 @property(nonatomic,strong) NSArray *menuItems;
+@property(nonatomic,strong) NSArray *menuIcons;
 
 @end
 
@@ -22,7 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.menuItems = @[@"按时间排序",@"按人气排序",@"随机显示"];
+    self.menuItems = @[@"编辑",@"删除",@"分享",@"赞一个"];
+    self.menuIcons = @[@"nav_edit",@"nav_delete",@"nav_share",@"nav_praise"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,12 +62,12 @@
 
 - (IBAction)btnClick:(id)sender {
     if (self.popView == nil) {
-        self.popView = [[PopMenuView alloc] initWithFrame:self.tableView.frame menuItems:self.menuItems];
+        self.popView = [[PopMenuView alloc] initWithFrame:self.tableView.frame menuItems:self.menuItems menuIcons:self.menuIcons];
         self.popView.delegate = self;
-        [self.tableView addSubview:self.popView];
+        [self.navigationController.view addSubview:self.popView];
     }
     [self.popView show];
-    [self.tableView bringSubviewToFront:self.popView];
+    [self.navigationController.view bringSubviewToFront:self.popView];
 }
 
 @end

@@ -19,7 +19,7 @@
 @property (nonatomic,strong) id<PopViewTableViewDelegate> delegate;
 
 //初始化方法
-- (instancetype)initWithFrame:(CGRect)frame menuItems:(NSArray *)menuItems;
+- (instancetype)initWithFrame:(CGRect)frame menuItems:(NSArray *)menuItems menuIcons:(NSArray*)menuIcons;
 //弹出菜单
 -(void)show;
 //收起菜单

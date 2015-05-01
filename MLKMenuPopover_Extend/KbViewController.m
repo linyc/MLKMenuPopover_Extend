@@ -12,7 +12,9 @@
 @interface KbViewController ()
 
 @property(nonatomic,strong) PopMenuView *popView;
+
 @property(nonatomic,strong) NSArray *menuItems;
+
 @property(nonatomic,strong) NSArray *menuIcons;
 
 @end

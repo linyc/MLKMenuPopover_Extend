@@ -22,6 +22,7 @@
 - (instancetype)initWithFrame:(CGRect)frame menuItems:(NSArray *)menuItems menuIcons:(NSArray*)menuIcons;
 //弹出菜单
 -(void)show;
+
 //收起菜单
 -(void)hide;
 @end
